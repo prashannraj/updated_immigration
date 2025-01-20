@@ -42,9 +42,10 @@
 
 <!-- index.html  21 Nov 2019 03:44:50 GMT -->
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Otika - Admin Dashboard Template</title>
+  <title>Immigration Project</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="/assets/css/app.min.css">
   <!-- Template CSS -->

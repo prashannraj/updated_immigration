@@ -1,0 +1,12 @@
+deployment:
+  branch: main  # Specify the branch you are deploying from (e.g., 'main' or 'master')
+  hooks:
+    before:
+      - 'composer install --no-dev --optimize-autoloader'
+    after:
+      - 'php artisan migrate --force'  # Run migrations after deploying
+      - 'php artisan config:cache'     # Clear config cache
+      - 'php artisan route:cache'      # Cache routes
+      - 'php artisan view:cache'       # Cache views
+      - 'php artisan event:cache'      # Cache events
+      - 'php artisan optimize'         # Optimize application
